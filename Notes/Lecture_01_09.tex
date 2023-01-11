@@ -1,0 +1,35 @@
+\documentclass[10pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{graphicx, enumerate, comment, listings, adjustbox, amsmath,
+circuitikz}
+
+\begin{document}
+
+\begin{flushleft}
+	Brandon Szeto \\
+	PID: A17002478 \\
+	January 9, 2023 \\
+	CSE 140L Fall 2022 \\
+    Professor Eldon, John \\
+\end{flushleft}
+
+\begin{center}
+	\Large CSE 140 Lecture 1
+\end{center}
+
+\begin{flushleft}
+    \begin{itemize}
+        \item Clocked/Sequential Logic
+        \item Combinational logic 
+    \end{itemize}
+\end{flushleft}
+
+\begin{circuitikz} \draw
+(0,2) node[and port] (myand1) {}
+(0,0) node[and port] (myand2) {}
+(2,1) node[xnor port] (myxnor) {}
+(myand1.out) -- (myxnor.in 1)
+(myand2.out) -- (myxnor.in 2);
+\end{circuitikz}
+
+\end{document}
